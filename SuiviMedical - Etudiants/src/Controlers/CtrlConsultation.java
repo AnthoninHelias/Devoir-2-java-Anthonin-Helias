@@ -61,7 +61,7 @@ public class CtrlConsultation
     public void InsertConsultation(int idConsult, String dateConsultation, int numPatient,int numMedecin)
     {
         try {
-            ps = cnx.prepareStatement("INSERT INTO values(?,?,?,?)");
+            ps = cnx.prepareStatement("INSERT INTO consultation values(?,?,?,?)");
             ps.setInt(1,idConsult);
             ps.setString(2,dateConsultation);
             ps.setInt(3,numPatient);

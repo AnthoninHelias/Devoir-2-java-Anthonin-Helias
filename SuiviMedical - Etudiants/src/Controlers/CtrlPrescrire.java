@@ -21,6 +21,16 @@ public class CtrlPrescrire
 
     public void InsertPrescrire(int idConsult, int numMedicament,int quantite)
     {
-
+        try {
+            ps = cnx.prepareStatement("INSERT INTO prescrire values(?,?,?)");
+            ps.setInt(1,idConsult);
+            ps.setInt(2,numMedicament);
+            ps.setInt(3,quantite);
+            ps.executeUpdate();
+            ps.close();
+        } catch (SQLException ex)
+        {
+            Logger.getLogger(CtrlConsultation.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 }

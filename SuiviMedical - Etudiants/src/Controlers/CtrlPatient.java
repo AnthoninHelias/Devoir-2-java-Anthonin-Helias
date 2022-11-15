@@ -28,7 +28,7 @@ public class CtrlPatient
             ps = cnx.prepareStatement("select nomPatient from patient");
             rs = ps.executeQuery();
             while (rs.next()) {
-                String patient = rs.getString("nomMedecin");
+                String patient = rs.getString("nomPatient");
                 lesPatients.add(patient);
             }
             ps.close();

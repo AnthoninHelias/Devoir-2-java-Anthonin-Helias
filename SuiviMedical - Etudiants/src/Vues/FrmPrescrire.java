@@ -28,6 +28,7 @@ public class FrmPrescrire extends JFrame
     private JLabel lblNomPatient;
     private JLabel lblMedicaments;
     private JDateChooser dcDateConsultation;
+    private CtrlPatient ctrlPatient;
 
     public FrmPrescrire()
     {
@@ -36,6 +37,9 @@ public class FrmPrescrire extends JFrame
         this.pack();
         this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         this.setLocationRelativeTo(null);
+
+        ctrlPatient = new CtrlPatient();
+
         this.addWindowListener(new WindowAdapter() {
             @Override
             public void windowOpened(WindowEvent e) {
@@ -45,6 +49,8 @@ public class FrmPrescrire extends JFrame
                 pnlDate.add(dcDateConsultation);
 
                 // A vous de jouer
+
+
 
             }
         });

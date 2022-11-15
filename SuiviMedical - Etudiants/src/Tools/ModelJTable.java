@@ -42,4 +42,7 @@ public class ModelJTable extends AbstractTableModel {
         return column == 3 ;
     }
 
+    public void LoadDatasConsultation(ArrayList<Consultation> getAllConsultations) {
+
+    }
 }

@@ -1,6 +1,7 @@
 package Vues;
 
 import Controlers.*;
+import Entities.Consultation;
 import Tools.ModelJTable;
 import com.toedter.calendar.JDateChooser;
 
@@ -54,7 +55,10 @@ public class FrmPrescrire extends JFrame
 
 
                     cboPatients.addItem(ctrlPatient.getAllPatients());
+
                     cboMedecins.addItem(ctrlMedecin.getAllMedecins());
+
+
 
 
 

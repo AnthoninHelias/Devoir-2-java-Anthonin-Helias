@@ -29,6 +29,7 @@ public class FrmPrescrire extends JFrame
     private JLabel lblMedicaments;
     private JDateChooser dcDateConsultation;
     private CtrlPatient ctrlPatient;
+    private CtrlMedecin ctrlMedecin;
 
     public FrmPrescrire()
     {
@@ -39,6 +40,7 @@ public class FrmPrescrire extends JFrame
         this.setLocationRelativeTo(null);
 
         ctrlPatient = new CtrlPatient();
+        ctrlMedecin = new CtrlMedecin();
 
         this.addWindowListener(new WindowAdapter() {
             @Override
@@ -49,6 +51,10 @@ public class FrmPrescrire extends JFrame
                 pnlDate.add(dcDateConsultation);
 
                 // A vous de jouer
+
+
+                    cboPatients.addItem(ctrlPatient.getAllPatients());
+                    cboMedecins.addItem(ctrlMedecin.getAllMedecins());
 
 
 

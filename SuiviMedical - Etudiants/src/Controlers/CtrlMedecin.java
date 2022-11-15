@@ -25,7 +25,7 @@ public class CtrlMedecin
     {
         ArrayList<String> lesMedecins = new ArrayList<>();
         try {
-            ps = cnx.prepareStatement("select idMedecin, nomMedecin from medecin");
+            ps = cnx.prepareStatement("select nomMedecin from medecin");
             rs = ps.executeQuery();
             while (rs.next()) {
                 String medecin = rs.getString("nomMedecin");
